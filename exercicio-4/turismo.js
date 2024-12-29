@@ -1,15 +1,20 @@
 const turist_name = prompt("Digite seu nome: ")
 // Recebe o nome do turista
+let cities = " "
+let count = 0
+// Inicializa a variável cities como uma string vazia e a variável count como 0
 
-const visit_city = prompt("Você já visitou alguma cidade? (sim/não)") // Recebe a cidade visitada
+let continue_ = prompt("Você já visitou alguma cidade? (sim/não)")
 
-while (visit_city) {
-    if (visit_city === "sim") {
-        const visited_city = prompt("Qual cidade você visitou?") // Recebe o nome da cidade visitada
-        const other_visited = prompt("Você visitou outra cidade? (sim/não)") // Pergunta se visitou outra cidade
-        alert("Certo " + turist_name + " você visitou a cidade de " + visited_city)
-    } else if (visit_city === "não") {
-        alert("Certo " + turist_name + " você não visitou nenhuma cidade")
-        break
-    }
+while (continue_ === "sim") {
+    let city = prompt("Qual cidade você visitou? ")
+    // citiies = cities + ...
+    cities += " - " + city +  + "\n"
+    count++
+    continue_ = prompt("Você já visitou outra cidade? (sim/não)")
 }
+
+alert("Turista: " + turist_name +
+    "\nQuantidades de cidades visitadas: " + count +
+    "\nCidades visitadas:\n" + cities 
+)
