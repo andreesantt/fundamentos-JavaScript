@@ -1,30 +1,33 @@
-let choose;
+let option = "";
 
-while (choose !== 5) {
-    choose = parseInt(prompt("Escolha uma opçao: " +
+do {
+    option = prompt("Seja bem-vindo (a) " +
+        "\nEscolha uma opção: " +
         "\n1 - Opção 1" +
         "\n2 - Opção 2" +
         "\n3 - Opção 3" +
         "\n4 - Opção 4" +
         "\n5 - Encerrar"
-    ))
-    switch (choose) {
-        case 1:
-            alert("Opção 1")
-            break
-        case 2:
-            alert("Opção 2")
-            break
-        case 3:
-            alert("Opção 3")
-            break
-        case 4:
-            alert("Opção 4")
-            break
-        case 5:
-            alert("Encerrando")
-            break
+    )
+
+    switch (option) {
+        case "1":
+            alert("Você escolheu a opção 1");
+            break;
+        case "2":
+            alert("Você escolheu a opção 2");
+            break;
+        case "3":
+            alert("Você escolheu a opção 3");
+            break;
+        case "4":
+            alert("Você escolheu a opção 4");
+            break;
+        case "5":
+            alert("Programa encerrado.");
+            break;
         default:
-            alert("Opção inválida")
+            alert("Opção inválida. Tente novamente.");
     }
-}
+
+} while (option !== "5");
