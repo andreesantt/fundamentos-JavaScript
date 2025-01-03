@@ -1,9 +1,8 @@
 // Inicia ; condiciona ; finaliza
 let indice = 0
 
-for ("Inicializando o FOR";
-    indice <= 10;
-    alert("Finalizando um bloco de repetição")
+for (alert("Inicializando o FOR");
+    indice <= 3;
 ) {
     alert("O valor do indice é: " + indice)
     indice++
