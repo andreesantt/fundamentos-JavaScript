@@ -1,9 +1,6 @@
 // Inicia ; condiciona ; finaliza
-let indice = 0
+let nome = "André" // tamanho 5 -> 0, 1, 2, 3, 4
 
-for (alert("Inicializando o FOR");
-    indice <= 3;
-) {
-    alert("O valor do indice é: " + indice)
-    indice++
+for (let indice = 0; indice <= nome.length; indice++) {
+    console.log(nome[indice])
 }
