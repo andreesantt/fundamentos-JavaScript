@@ -34,9 +34,24 @@ console.log(indice)
 
 // Cortar e Concatenar
 // slice
-const hobbit = arr.slice(0, 4)
+const hobbits = arr.slice(0, 4)
 const outros = arr.slice(-4)
 console.log(arr)
-console.log(hobbit)
+console.log(hobbits)
 console.log(outros)
 
+// concat
+const sociedade =  hobbits.concat(outros, 'Boromir')
+console.log(sociedade)
+
+// Substituição dos Elementos
+// splice
+const elementoRemovidos = sociedade.splice(indice, 1, "Gandalf, o Cinzento")
+console.log(sociedade)
+console.log(elementoRemovidos)
+
+// Usando o for para percorrer cada elemento do array
+for (let indice = 0; indice < sociedade.length; indice++) {
+    const elemento = sociedade[indice]
+    console.log(elemento + " se encontra na posição " + indice)
+  }
