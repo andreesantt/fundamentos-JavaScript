@@ -44,3 +44,26 @@ function criarUsuario(nome, email, senha, tipo = "leitor") {
   
   criarUsuario("Isaac", "isaac@email.com", "1234")
   novoUsuario("Isaac", "isaac@email.com", "1234")
+
+  function muitosParametros(nome, telefone, endereco, aniversario, email, senha) {
+    // ...
+  }
+
+  function objetosComoParametros(usuario) {
+    // ...
+    usuario.nome
+    usuario.email
+  }
+
+  muitosParametros("nome", "telefone", "endereço", "aniversario", "email", "senha")
+
+  const dadosDoUsuario = {
+    nome: "",
+    telefone: "",
+    email: "",
+    senha: "",
+    endereco: "",
+    aniversario: "",
+  }
+
+  objetosComoParametros(dadosDoUsuario)
