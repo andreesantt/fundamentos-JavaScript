@@ -17,6 +17,35 @@ function criarProduto(nome, preco) {
     return produto
 }
 
-const notebook = criarProduto("Notebook Intel Core i3 8gb", 2500)
+console.log(criarProduto("Notebook Intel Core i3 8gb", 2500))
 
-console.log(notebook)
+function areaRetangular(base, altura) {
+    return base * altura
+}
+
+function areaQuadrada(lado) {
+    return areaRetangular(lado, lado)
+}
+console.log(areaRetangular(3, 5))
+
+console.log(areaQuadrada(9))
+
+function ola() {
+    let texto = "..."
+    return texto
+    texto = "Olá, Mundo"
+    console.log(texto)
+}
+
+console.log(ola()) // função acaba quando o return é atribuido na função
+
+function maioridade(idade) {
+    if (idade >= 18) {
+        return "Maior de idade"
+    } else {
+        return "Menor de idade"
+    }
+}
+
+console.log(maioridade(29))
+console.log(maioridade(13))
