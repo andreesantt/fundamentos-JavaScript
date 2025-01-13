@@ -1,21 +1,26 @@
 function calcular_area_triangulo(base, altura) {
-    return (base * altura) / 2
+    let areatriagulo =  (base * altura) / 2
+    alert('Área do triângulo: ' + areatriagulo)
 }
 
 function calcular_area_retangulo(base, altura) {
-    return base * altura
+     let arearetangulo = base * altura
+     alert('Área do retângulo: ' + arearetangulo)
 }
 
 function calcular_area_quadrado(lado) {
-    return lado ** 2
+    let areaquadrado = lado ** 2
+    alert('Área do quadrado: ' + areaquadrado)
 }
 
 function calcular_area_trapezio(basemaior, basemenor, altura) {
-    return ((basemaior + basemenor) * altura) / 2
+    let areatrapezio = ((basemaior + basemenor) * altura) / 2
+    alert('Área do trapézio: ' + areatrapezio)
 }
 
 function calcular_area_circulo(raio, Pi = 3.14 ) {
-    return Pi * raio ** 2
+    let areacirculo =  Pi * raio ** 2
+    alert('Área do círculo: ' + areacirculo)
 }
 
 function menuPrincipal() {
@@ -55,6 +60,7 @@ function menuPrincipal() {
             case "5":
                 let raio = parseFloat(prompt("Digite o raio do círculo:"));
                 calcular_area_circulo(raio);
+                break
             case "6":
                 alert('Finalizando...')
                 break
