@@ -10,11 +10,17 @@ const personagens = [
 
 // Map -> Mapeamento de array existente para um novo array criado
 
-const nomes=  []
+// const nomes=  []
 
-for (let i = 0; i < personagens.length; i++) {
-    nomes.push(personagens[i].nome)
-}
+// for (let i = 0; i < personagens.length; i++) {
+//     nomes.push(personagens[i].nome)
+// }
+
+const nomes = personagens.map(function (personagem) {
+    return personagem.nome
+})
 
 console.log(nomes)
 
+
+ 
