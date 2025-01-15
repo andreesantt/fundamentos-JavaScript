@@ -30,7 +30,6 @@ do {
         '\n5. Excluir uma vaga' +
         '\n6. Sair'
     )
-
     switch(opcao) {
         case "1":
             listar_vagas()
@@ -53,5 +52,4 @@ do {
         default:
             alert('Opção inválida!')
     }
-
 } while (opcao !== "6")
