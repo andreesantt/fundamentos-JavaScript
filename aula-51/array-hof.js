@@ -66,7 +66,7 @@ console.log(racas)
 
 
 personagens.sort(function (a, b) {
-    return a.nível - b.nível
+    return b.nível - a.nível
 })
 
 console.log(personagens)
