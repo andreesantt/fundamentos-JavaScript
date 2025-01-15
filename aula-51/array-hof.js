@@ -26,13 +26,17 @@ console.log(nomes)
 
 // Filter -> Utiliza elementos específicos e cria um novo array
 
-const orcs = []
+// const orcs = []
 
-for (let i = 0; i < personagens.length; i++) {
-    if ( personagens[i].raca === "Orc")
-        orcs.push(personagens[i])
+// for (let i = 0; i < personagens.length; i++) {
+//     if ( personagens[i].raca === "Orc")
+//         orcs.push(personagens[i])
     
-}
+// }
+
+const orcs = personagens.filter(function (personagem) {
+    return personagem.raca === "Orc"
+})
 
 console.log(orcs)
 
