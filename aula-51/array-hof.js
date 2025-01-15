@@ -40,5 +40,15 @@ const orcs = personagens.filter(function (personagem) {
 
 console.log(orcs)
 
+// Reduce -> Cria um novo array -> transforma em outro valor
+
+const nivel_total = personagens.reduce(function (valorAcumulado, personagem) {
+    return valorAcumulado + personagem.nível
+}, 0)
+
+console.log(nivel_total)
+
+
+
 
  
