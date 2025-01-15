@@ -48,7 +48,14 @@ const nivel_total = personagens.reduce(function (valorAcumulado, personagem) {
 
 console.log(nivel_total)
 
+const racas = personagens.reduce( function (valorAcumulado, personagem) {
+    if (valorAcumulado[personagem.raca]) {
+        valorAcumulado[personagem.raca].push(personagem)
+    } else {
+        valorAcumulado[personagem.raca] = [personagem]
+    }
 
+    return valorAcumulado
+}, {})
 
-
- 
+console.log(racas)
