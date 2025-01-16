@@ -34,7 +34,11 @@ function criar_nova_vaga() {
         '\nData limite para as incrições: '
     );
 
-    let confirmacao = confirm('Você confirma as informações salvas? Deseja salvar?\n' + input)
+    let confirmacao = confirm('Você confirma as informações? Deseja salvar?\n' + input)
+
+    if (confirmacao !== confirm) {
+        
+    }
 
 
     let  [nome, descricao, data_limite] = input.split(',');
