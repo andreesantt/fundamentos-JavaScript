@@ -34,6 +34,8 @@ function criar_nova_vaga() {
         '\nData limite para as incrições: '
     );
 
+    let confirmacao = confirm('Você confirma as informações salvas? Deseja salvar?\n' + input)
+
 
     let  [nome, descricao, data_limite] = input.split(',');
 
@@ -45,7 +47,7 @@ function criar_nova_vaga() {
         candidatos: []
     }
 
-    
+
     vaga_de_emprego.push(novaVaga)
 }
 
