@@ -28,11 +28,25 @@ function listar_vagas() {
 }
 
 function criar_nova_vaga() {
-    let novaVaga = vaga_de_emprego.push(prompt('Digite abaixo as seguintes infomrações: ' +
+    let input = prompt('Digite abaixo as seguintes informações: ' +
         '\nNome da vaga: ' +
         '\nDescrição da vaga: ' +
         '\nData limite para as incrições: '
-    ))
+    );
+
+
+    let  [nome, descricao, data_limite] = input.split(',');
+
+
+    let novaVaga = {
+        nome: nome,
+        descricao: descricao,
+        data_limite: data_limite,
+        candidatos: []
+    }
+
+    
+    vaga_de_emprego.push(novaVaga)
 }
 
 function visualizar_vaga () {
