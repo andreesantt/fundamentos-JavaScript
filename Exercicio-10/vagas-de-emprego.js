@@ -3,34 +3,36 @@ let vaga_de_emprego = [
     {
         nome: "Desenvolvedor Frontend",
         descricao: "Vaga para desenvolvedor frontend com experiência em React.",
-        data_limite: "2025-01-30",
-        candidatos: ["João", "Maria"],
+        data_limite: "30-01-2025",
+        candidatos: ["João", " Maria"],
     },
     {
         nome: "Analista de Sistemas",
         descricao: "Vaga para analista de sistemas com experiência em Python.",
-        data_limite: "2025-02-15",
+        data_limite: "15-02-2025",
         candidatos: ["Pedro"],
     },
     {
         nome: "Designer Gráfico",
         descricao: "Vaga para designer gráfico com conhecimento em Adobe Illustrator.",
-        data_limite: "2025-01-20",
-        candidatos: ["Ana", "Lucas", "Fernanda"],
+        data_limite: "20-01-2025",
+        candidatos: ["Ana", " Lucas", " Fernanda"],
     }
 ]
 
 function listar_vagas() {
-   function listar_vagas() {
-    let vaga = vaga_de_emprego[i]; // Obtém cada vaga pelo índice
-        alert(`Índice: ${i}\nNome: ${vaga.nome}\nCandidatos inscritos: ${vaga.candidatos.length}`);
+    for (let i = 0; i < vaga_de_emprego.length; i++) {
+        let lista = vaga_de_emprego[i];
+        alert('Vaga: ' + i + '\nNome: ' + lista.nome + '\nCandidatos Inscritos: ' + lista.candidatos + '\nInscrições encerram: ' + lista.data_limite)
     }
 }
 
-}
-
 function criar_nova_vaga() {
-
+    let novaVaga = vaga_de_emprego.push(prompt('Digite abaixo as seguintes infomrações: ' +
+        '\nNome da vaga: ' +
+        '\nDescrição da vaga: ' +
+        '\nData limite para as incrições: '
+    ))
 }
 
 function visualizar_vaga () {
