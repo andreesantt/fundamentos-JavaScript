@@ -33,7 +33,10 @@ function criarVaga() {
 }
 
 function visualizar_vaga () {
+    const indice = prompt('Informe o índece da vaga que deseja exibir: ')
+    const vaga = vaga[indice]
 
+    
 }
 
 function inscrever_candidato() {
