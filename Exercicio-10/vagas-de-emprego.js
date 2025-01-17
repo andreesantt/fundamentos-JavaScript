@@ -27,6 +27,8 @@ function criarVaga() {
 
     if (confirmacao) {
         const novaVaga = {nome, descricao, dataLimite, candidatos: [] }
+        vagas.push(novaVaga)
+        alert('Vaga criada com sucesso!')
     }
 }
 
