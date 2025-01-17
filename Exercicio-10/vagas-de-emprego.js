@@ -36,7 +36,17 @@ function visualizar_vaga () {
     const indice = prompt('Informe o índece da vaga que deseja exibir: ')
     const vaga = vaga[indice]
 
-    
+    const candidatosEmTexto = vaga.candidatos.reduce(function (textoFinal, candidato) {
+        return textoFinal + "\n - " + candidato
+    }, "")
+    alert(
+        "Vaga n° " + indice +
+        "znNome: " + vaga.nome + 
+        "\nDescrição: " + vaga.descricao +
+        "\nData Limite: " + vaga.dataLimite +
+        "\nQuantidade de candidatos: " + vaga.candidatos.length +
+        "\nCandidatos Inscritos: " + candidatosEmTexto
+    )
 }
 
 function inscrever_candidato() {
