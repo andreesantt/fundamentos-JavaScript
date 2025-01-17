@@ -1,40 +1,33 @@
 let opcao = ""
 let vagas = []
 
-function listar_vagas() {
+function listarVagas() {
     const vagasEmTexto = vagas.reduce(function (textoFinal, vaga, indice) {
-        //1. nome, quantidade de candidatos
+        //1. nome, (x candidatos)
         textoFinal += indice + ". "
-        
-    })
+        textoFinal += vaga.nome 
+        textoFinal += " (" + vaga.candidatos.length + " candidatos)"
+        return textoFinal
+    }, "")
+
+    alert(vagasEmTexto)
 }
 
-function criar_nova_vaga() {
-    let input = prompt('Digite abaixo as seguintes informações: ' +
-        '\nNome da vaga: ' +
-        '\nDescrição da vaga: ' +
-        '\nData limite para as incrições: '
-    );
+function criarVaga() {
+    const nome = prompt("Informe um nome para a vaga: ")
+    const descricao = prompt("Informe uma descrição para a vaga: ")
+    const dataLimite = prompt('Informe uma data limite (dd/mm/aaaa) para a vaga')
 
-    let confirmacao = confirm('Você confirma as informações? Deseja salvar?\n' + input)
+    const confirmacao = confirm(
+        "Daseja criar uma nova vaga com essas informações?\n" +
+        "Nome: " + nome + 
+        "\nDescrição: " + descricao +
+        "\nData Limite: " + dataLimite
+    )
 
-    if (confirmacao !== confirm) {
-        
+    if (confirmacao) {
+        const novaVaga = {nome, descricao, dataLimite, candidatos: [] }
     }
-
-
-    let  [nome, descricao, data_limite] = input.split(',');
-
-
-    let novaVaga = {
-        nome: nome,
-        descricao: descricao,
-        data_limite: data_limite,
-        candidatos: []
-    }
-
-
-    vaga_de_emprego.push(novaVaga)
 }
 
 function visualizar_vaga () {
