@@ -1,30 +1,12 @@
 let opcao = ""
-let vaga_de_emprego = [
-    {
-        nome: "Desenvolvedor Frontend",
-        descricao: "Vaga para desenvolvedor frontend com experiência em React.",
-        data_limite: "30-01-2025",
-        candidatos: ["João", " Maria"],
-    },
-    {
-        nome: "Analista de Sistemas",
-        descricao: "Vaga para analista de sistemas com experiência em Python.",
-        data_limite: "15-02-2025",
-        candidatos: ["Pedro"],
-    },
-    {
-        nome: "Designer Gráfico",
-        descricao: "Vaga para designer gráfico com conhecimento em Adobe Illustrator.",
-        data_limite: "20-01-2025",
-        candidatos: ["Ana", " Lucas", " Fernanda"],
-    }
-]
+let vagas = []
 
 function listar_vagas() {
-    for (let i = 0; i < vaga_de_emprego.length; i++) {
-        let lista = vaga_de_emprego[i];
-        alert('Vaga: ' + i + '\nNome: ' + lista.nome + '\nCandidatos Inscritos: ' + lista.candidatos + '\nInscrições encerram: ' + lista.data_limite)
-    }
+    const vagasEmTexto = vagas.reduce(function (textoFinal, vaga, indice) {
+        //1. nome, quantidade de candidatos
+        textoFinal += indice + ". "
+        
+    })
 }
 
 function criar_nova_vaga() {
