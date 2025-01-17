@@ -49,8 +49,20 @@ function visualizar_vaga () {
     )
 }
 
-function inscrever_candidato() {
+function inscreverCandidato() {
+    const candidato = prompt("Informe o nome do candidato: ")
+    const indice = prompt('Informe o indice da vaga para qual o mesmo deseja se inscrever: ')
+    const vaga = vagas[indice]
 
+    const confirmacao = confirm(
+        "Deseja inscrever o candidato " + candidato + " na vaga " + indice + "?\n" +
+        "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao +"\nData Limite: " + vaga.dataLimite
+    )
+
+    if(confimacao) {
+        vaga.candidato.push()
+        alert('Inscrição realizado com sucesso!')
+    }
 }
 
 function excluir_vaga() {
