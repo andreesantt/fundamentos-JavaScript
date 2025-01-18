@@ -65,7 +65,7 @@ function inscreverCandidato() {
     }
 }
 
-function excluir_vaga() {
+function excluirVaga() {
     const indice = prompt('Informe o índice da vaga que deseja excluir: ')
     const vaga = vaga[indice]
 
@@ -89,19 +89,19 @@ do {
     )
     switch(opcao) {
         case "1":
-            listar_vagas()
+            listarVagas()
             break
         case "2":
-            criar_nova_vaga()
+            criarVaga()
             break
         case "3":
             visualizar_vaga()
             break
         case "4":
-            inscrever_candidato()
+            inscreverCandidato()
             break
         case "5":
-            excluir_vaga()
+            excluirVaga()
             break
         case "6":
             alert('Finalizando...')
