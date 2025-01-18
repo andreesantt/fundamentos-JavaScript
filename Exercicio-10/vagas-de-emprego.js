@@ -73,7 +73,8 @@ function excluir_vaga() {
         "Tem certeza que deseja excluir a vaga " + indice + "?\n" + "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao +"\nData Limite: " + vaga.dataLimite
     )
     if (confirmacao) {
-        
+        vaga.splice(indice, 1)
+        alert('Vaga excluída.')
     }
 }
 
