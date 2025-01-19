@@ -34,6 +34,10 @@ function criarVaga() {
 
 function visualizar_vaga () {
     const indice = prompt('Informe o índece da vaga que deseja exibir: ')
+    if (indice >= vagas.length || indice < 0) {
+        alert("índice inválido")
+        return
+    }
     const vaga = vagas[indice]
 
     const candidatosEmTexto = vaga.candidatos.reduce(function (textoFinal, candidato) {
