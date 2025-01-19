@@ -6,7 +6,7 @@ function listarVagas() {
         //1. nome, (x candidatos)
         textoFinal += indice + ". "
         textoFinal += vaga.nome 
-        textoFinal += " (" + vaga.candidatos.length + " candidatos)\n)"
+        textoFinal += " (" + vaga.candidatos.length + " candidatos)\n"
         return textoFinal
     }, "")
 
@@ -19,7 +19,7 @@ function criarVaga() {
     const dataLimite = prompt('Informe uma data limite (dd/mm/aaaa) para a vaga')
 
     const confirmacao = confirm(
-        "Daseja criar uma nova vaga com essas informações?\n" +
+        "Deseja criar uma nova vaga com essas informações?\n" +
         "Nome: " + nome + 
         "\nDescrição: " + descricao +
         "\nData Limite: " + dataLimite
@@ -41,7 +41,7 @@ function visualizar_vaga () {
     }, "")
     alert(
         "Vaga n° " + indice +
-        "znNome: " + vaga.nome + 
+        "\nNome: " + vaga.nome + 
         "\nDescrição: " + vaga.descricao +
         "\nData Limite: " + vaga.dataLimite +
         "\nQuantidade de candidatos: " + vaga.candidatos.length +
@@ -61,13 +61,13 @@ function inscreverCandidato() {
 
     if(confirmacao) {
         vaga.candidatos.push(candidato)
-        alert('Inscrição realizado com sucesso!')
+        alert('Inscrição realizada com sucesso!')
     }
 }
 
 function excluirVaga() {
     const indice = prompt('Informe o índice da vaga que deseja excluir: ')
-    const vaga = vaga[indice]
+    const vaga = vagas[indice]
 
     const confirmacao = confirm(
         "Tem certeza que deseja excluir a vaga " + indice + "?\n" + "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao +"\nData Limite: " + vaga.dataLimite
@@ -90,21 +90,20 @@ function exibirMenu() {
     return opcao
 }
 
-function executar(exibirMenu) {
-    let opcao = ""
+function executar() {
 
     do {
-        opcao = exibirMenu
+        opcao = exibirMenu()
 
         switch(opcao) {
             case "1":
                 listarVagas()
                 break
             case "2":
-                novaVaga()
+                criarVaga()
                 break
             case "3":
-                exibirMenu()
+                visualizar_vaga()
                 break
             case "4":
                 inscreverCandidato()
