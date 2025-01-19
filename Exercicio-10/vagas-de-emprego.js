@@ -78,8 +78,8 @@ function excluirVaga() {
     }
 }
 
-do {
-    opcao = prompt('Bem-vindo ao menu de Vagas!\n' +
+function exibirMenu() {
+    const opcao = prompt('Bem-vindo ao menu de Vagas!\n' +
         '\n1. Listar vagas disponíveis' +
         '\n2. Criar uma nova vaga' +
         '\n3. Visualizar uma vaga' +
@@ -87,26 +87,5 @@ do {
         '\n5. Excluir uma vaga' +
         '\n6. Sair'
     )
-    switch(opcao) {
-        case "1":
-            listarVagas()
-            break
-        case "2":
-            criarVaga()
-            break
-        case "3":
-            visualizar_vaga()
-            break
-        case "4":
-            inscreverCandidato()
-            break
-        case "5":
-            excluirVaga()
-            break
-        case "6":
-            alert('Finalizando...')
-            break
-        default:
-            alert('Opção inválida!')
-    }
-} while (opcao !== "6")
+    return opcao
+}
