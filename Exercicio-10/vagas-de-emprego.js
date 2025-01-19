@@ -6,7 +6,7 @@ function listarVagas() {
         //1. nome, (x candidatos)
         textoFinal += indice + ". "
         textoFinal += vaga.nome 
-        textoFinal += " (" + vaga.candidatos.length + " candidatos)"
+        textoFinal += " (" + vaga.candidatos.length + " candidatos)\n)"
         return textoFinal
     }, "")
 
@@ -34,7 +34,7 @@ function criarVaga() {
 
 function visualizar_vaga () {
     const indice = prompt('Informe o índece da vaga que deseja exibir: ')
-    const vaga = vaga[indice]
+    const vaga = vagas[indice]
 
     const candidatosEmTexto = vaga.candidatos.reduce(function (textoFinal, candidato) {
         return textoFinal + "\n - " + candidato
@@ -59,8 +59,8 @@ function inscreverCandidato() {
         "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao +"\nData Limite: " + vaga.dataLimite
     )
 
-    if(confimacao) {
-        vaga.candidato.push()
+    if(confirmacao) {
+        vaga.candidatos.push(candidato)
         alert('Inscrição realizado com sucesso!')
     }
 }
@@ -73,7 +73,7 @@ function excluirVaga() {
         "Tem certeza que deseja excluir a vaga " + indice + "?\n" + "Nome: " + vaga.nome + "\nDescrição: " + vaga.descricao +"\nData Limite: " + vaga.dataLimite
     )
     if (confirmacao) {
-        vaga.splice(indice, 1)
+        vagas.splice(indice, 1)
         alert('Vaga excluída.')
     }
 }
@@ -90,7 +90,7 @@ function exibirMenu() {
     return opcao
 }
 
-function executar() {
+function executar(exibirMenu) {
     let opcao = ""
 
     do {
@@ -105,6 +105,7 @@ function executar() {
                 break
             case "3":
                 exibirMenu()
+                break
             case "4":
                 inscreverCandidato()
                 break
@@ -115,7 +116,9 @@ function executar() {
                 alert('Saindo...')
                 break
             default:
-                alert('Opçã inválida.')
+                alert('Opção inválida.')
         }
     } while (opcao !== "6")
 }
+
+executar()
